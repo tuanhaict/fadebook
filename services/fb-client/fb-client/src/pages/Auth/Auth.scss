@@ -1,0 +1,32 @@
+.auth {
+    background-color: #f0f2f5;
+    &-inner {
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+    }
+    &-container {
+        max-width: 980px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin: 0 auto;
+    }
+    &-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-logo {
+        max-width: 48rem;
+        &-image {
+            height: 11rem;
+        }
+        &-slogan {
+            font-size: 2rem;
+            padding-left: 3.2rem;
+        }
+    }
+
+
+
+}

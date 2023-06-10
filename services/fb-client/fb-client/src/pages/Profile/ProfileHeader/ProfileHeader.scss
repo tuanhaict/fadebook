@@ -1,0 +1,101 @@
+@import "../../../index.scss";
+.profile {
+  &-header {
+    background-color: #fff;
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 0 0 0 2 #ccc;
+  }
+  &-image {
+    height: 40rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    & > image {
+      object-fit: cover;
+    }
+  }
+  &-user-info {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 28rem;
+    left: 4rem;
+    transform: translateY(50%);
+    & .user {
+      position: relative;
+      &::after {
+        content: "";
+        width: 18rem;
+        height: 18rem;
+        background-color: #fff;
+        border-radius: 100%;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: -5px;
+        left: -5px;
+      }
+    }
+  }
+  &-user-username {
+    text-transform: capitalize;
+  }
+  &-user-desc {
+    margin-left: 2rem;
+    & > span {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    & > p {
+      margin-top: 1rem;
+    }
+  }
+  &-user-list {
+    margin-top: 15rem;
+    display: flex;
+    align-items: center;
+  }
+  &-user-link {
+    padding: 2rem;
+    display: inline-block;
+    color: rgba($color: #000000, $alpha: 0.7);
+    font-weight: 600;
+    border-bottom: 4px solid transparent;
+    &.actived {
+      color: $primary-color;
+      border-bottom-color: $primary-color;
+    }
+  }
+  & .friend-status {
+    border: none;
+    border-radius: 6px;
+    padding: 1.2rem 1.6rem;
+    font-family: $primary-font;
+    margin-left: auto;
+    display: block;
+    cursor: pointer;
+    margin-top: 5rem;
+    margin-right: 5rem;
+    margin-bottom: -5rem;
+    background-color: $primary-color;
+    color: white;
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.1);
+      color: #000;
+    }
+  }
+  & .upload-avatar {
+    position: absolute;
+    bottom: 9rem;
+    left: 18rem;
+    font-size: 2.4rem;
+    background-color: #ddd;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}

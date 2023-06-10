@@ -1,0 +1,34 @@
+apiVersion: skaffold/v2alpha3
+kind: Config
+build:
+  local:
+    push: false
+  artifacts:
+    - image: tuanha888/users
+      context: services/users
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
+    - image: tuanha888/friends
+      context: services/friends
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
+    - image: tuanha888/posts
+      context: services/posts
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
+deploy:
+  kubectl:
+    manifests:
+      - ./infra/k8s/*

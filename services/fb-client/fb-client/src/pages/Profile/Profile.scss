@@ -1,0 +1,10 @@
+.profile {
+    padding-top: 5rem;
+    background-color: #f0f2f5;
+    &-container {
+        max-width: 1060px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 1.5rem;
+    }
+}

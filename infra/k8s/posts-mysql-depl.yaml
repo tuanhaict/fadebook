@@ -1,0 +1,63 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: posts-mysql-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100M
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: posts-mysql-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: posts-mysql
+  template:
+    metadata:
+      labels:
+        app: posts-mysql
+    spec:
+      containers:
+        - name: posts-mysql
+          image: mysql
+          env:
+            - name: MYSQL_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: app-variables
+                  key: MYSQL_DATABASE
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: app-secrets
+                  key: MYSQL_ROOT_PASSWORD
+          ports:
+            - containerPort: 3306
+              name: mysql
+          volumeMounts:
+            - name: posts-ps
+              mountPath: /var/lib/mysql
+              subPath: posts-mysql
+      volumes:
+        - name: posts-ps
+          persistentVolumeClaim:
+            claimName: posts-mysql-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: posts-mysql-service
+spec:
+  selector:
+    app: posts-mysql
+  ports:
+    - name: posts-mysql
+      protocol: TCP
+      port: 3306
+      targetPort: 3306

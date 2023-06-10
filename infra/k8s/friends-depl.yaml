@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: friends-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: friends
+  template:
+    metadata:
+      labels:
+        app: friends
+    spec:
+      containers:
+        - name: friends
+          image: tuanha888/friends
+          envFrom:
+            - configMapRef:
+                name: app-variables
+            - secretRef:
+                name: app-secrets
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: friends-service
+spec:
+  selector:
+    app: friends
+  ports:
+    - name: friends
+      protocol: TCP
+      port: 3000
+      targetPort: 3000

@@ -1,0 +1,60 @@
+@import "../../../index.scss";
+.auth-login {
+    width: 40rem;
+    padding: 1.6rem 2rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-form {
+        input, button {
+            width: 100%;
+            padding: 2rem;
+            outline: none;
+            border-radius: 6px;
+            font-family: $primary-font;
+            margin-bottom: 1.2rem;
+        }
+        input {
+            border: 1px solid #ccc;
+            color: #ccc;
+            font-size: 1.6rem;
+            transition: all .2s linear;
+        }
+        input:focus {
+            border: 1px solid $primary-color;
+            box-shadow: 0px 0px 1px 1px rgba($color: #000000, $alpha: 0.3);
+        }
+        button {
+            border: none;
+            background-color: $primary-color;
+            color: white;
+            font-weight: 600;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
+    
+}
+.forgot-password {
+    color: $primary-color;
+    &-wrapper {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #ccc;
+    }
+}
+.auth-button {
+    padding: 1.2rem;
+    margin-top: 1.6rem;
+    font-size: 1.6rem;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    background-color: #42b72a;
+    font-weight: 600;
+    cursor: pointer;
+    min-width: 20rem;
+}

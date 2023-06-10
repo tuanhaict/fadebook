@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: posts-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: posts
+  template:
+    metadata:
+      labels:
+        app: posts
+    spec:
+      containers:
+        - name: posts
+          image: tuanha888/posts
+          envFrom:
+            - configMapRef:
+                name: app-variables
+            - secretRef:
+                name: app-secrets
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: posts-service
+spec:
+  selector:
+    app: posts
+  ports:
+    - name: posts
+      protocol: TCP
+      port: 3000
+      targetPort: 3000

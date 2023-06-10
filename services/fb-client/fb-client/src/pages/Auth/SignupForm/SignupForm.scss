@@ -1,0 +1,108 @@
+@import "../../../index.scss";
+.auth-register {
+    display: flex;
+    position: fixed;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    &-modal {
+        width: 43rem;
+        background-color: #fff;
+        border-radius: 6px;
+        position: relative;
+    }
+    &-top {
+        padding: 1.5rem;
+        border-bottom: 1px solid #ccc;
+    }
+    &-title {
+        font-size: 2.4rem;
+        font-weight: 600;
+
+    }
+    &-desc {
+        font-size: 1.4rem;
+        color: rgba($color: #000000, $alpha: 0.7);
+        margin-top: 8px;
+    }
+    &-icon {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        font-size: 2rem;
+        color: rgba($color: #000000, $alpha: 0.8);
+        cursor: pointer;
+    }
+    &-form {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & > input {
+            width: 100%;
+        }
+        & > span {
+            align-self: flex-start;
+            margin-bottom: 1rem;
+        }
+        & input {
+            padding: 1.2rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            outline: none;
+            margin-bottom: 1rem;
+        }
+        & > input, & input[type="text"] {
+            background-color: #f5f6f7;
+            color: rgba($color: #000000, $alpha: 0.7);
+            font-size: 1.6rem;
+            font-family: $primary-font;
+        }
+    }
+    &-name {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        input {
+            width: calc(50% - 0.75rem);
+        }
+    }
+    &-gender {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .auth-register-radio {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            width: calc(50% - 7.5px);
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            & > input {
+                margin: 0;
+            }
+            & > label {
+                width: 100%;
+            }
+        }
+    }
+}
+input[type="date"]{
+    background-color: #f5f6f7;
+    color: rgba($color: #000000, $alpha: 0.8);
+    font-size: 1.6rem;
+    outline: none;
+    border-radius: 5px;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}

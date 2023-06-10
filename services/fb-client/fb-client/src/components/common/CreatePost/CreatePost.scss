@@ -1,0 +1,22 @@
+@import "../../../index.scss";
+.create-post {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.6rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 1px 0 #aaa;
+    margin-bottom: 1.2rem;
+    &-button {
+        margin-left: 1.4rem;
+        background-color: #eee;
+        border: none;
+        border-radius: 3rem;
+        padding: 1.4rem;
+        width: calc(100% - 3.6rem);
+        text-align: start;
+        cursor: pointer;
+        font-family: $primary-font;
+        font-size: 1.6rem;
+    }
+}

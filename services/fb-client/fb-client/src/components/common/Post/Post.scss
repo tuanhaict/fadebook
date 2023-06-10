@@ -1,0 +1,64 @@
+@import "../../../index.scss";
+.post {
+    border-radius: 1rem;
+    background-color: #fff;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 0 1px 0 #ccc;
+    &-top {
+        padding: 1.2rem;
+    }
+    &-caption {
+        margin-top: 1.2rem;
+        color: rgba($color: #000000, $alpha: 0.8);
+        font-size: 1.4rem;
+    }
+    &-image-wrapper {
+        overflow: hidden;
+    }
+    &-image {
+        object-fit: cover;
+    }
+    &-statistics {
+        padding: 1.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: rgba($color: #000000, $alpha: 0.8);
+        font-size: 1.4rem;
+        border-bottom: 1px solid #ccc;
+        & .post-comments {
+            cursor: pointer;
+        }
+    }
+    &-reactions {
+        display: flex;
+        align-items: flex-end;
+        &-text {
+            margin-left: 0.8rem;
+        }
+        &-icon {
+            color:$primary-color;
+            font-size: 2rem;
+        }
+    }
+    &-actions {
+        display: flex;
+        padding: 1.4rem;
+        align-items: center;
+        justify-content: space-around;
+    }
+    &-action {
+        display: flex;
+        align-items: flex-end;
+        cursor: pointer;
+        &.is-actived {
+            color: $primary-color;
+        }
+
+    }
+    &-icon {
+        font-size: 2.2rem;
+        margin-right: 1rem;
+    }
+
+}

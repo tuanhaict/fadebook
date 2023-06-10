@@ -1,0 +1,24 @@
+@import "../../../index.scss";
+.accept-friend-modal {
+    margin-left: 5rem;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & .accept-friend, .reject-friend {
+        font-family: $primary-font;
+        padding: 1rem 1.4rem;
+        border-radius: 6px;
+        cursor: pointer;
+        border: none;
+        width: calc(50% - 1rem);
+    }
+    & .accept-friend {
+        background-color: $primary-color;
+        color: #fff;
+    }
+    & .reject-friend {
+        background: rgba($color: #000000, $alpha: 0.1);
+
+    }
+}

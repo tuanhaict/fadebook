@@ -1,0 +1,9 @@
+.home {
+    background-color: #eee;
+    padding-top: 7rem;
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+
+    }
+}

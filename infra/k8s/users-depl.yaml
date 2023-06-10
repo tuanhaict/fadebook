@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: users-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: users
+  template:
+    metadata:
+      labels:
+        app: users
+    spec:
+      containers:
+        - name: users
+          image: tuanha888/users
+          envFrom:
+            - configMapRef:
+                name: app-variables
+            - secretRef:
+                name: app-secrets
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: users-service
+spec:
+  selector:
+    app: users
+  ports:
+    - name: users
+      protocol: TCP
+      port: 3000
+      targetPort: 3000

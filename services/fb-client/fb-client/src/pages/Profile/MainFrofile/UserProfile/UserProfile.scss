@@ -1,0 +1,30 @@
+.user-profile {
+    flex: 2 1 0;
+    .user-introduction {
+        padding: 1.4rem;
+        border-radius: .6rem;
+        background-color: #fff;
+        &-item {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        &-text {
+            margin-left: 1rem;
+            font-size: 1.6rem;
+        }
+        &-icon {
+            color: rgba($color: #000000, $alpha: 0.8);
+            font-size: 2rem;
+        }
+
+    }
+    &-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 1rem;
+
+    }
+}

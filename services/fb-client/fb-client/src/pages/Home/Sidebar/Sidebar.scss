@@ -1,0 +1,72 @@
+@import "../../../index.scss";
+.sidebar {
+    height: calc(100vh - 7rem);
+    overflow: hidden;
+    flex: 1 1 0;
+    &-avatar {
+        display: flex;
+        align-items: center;
+
+    }
+    &-username {
+        margin-left: 1rem;
+        text-transform: capitalize;
+        font-weight: 500;
+    }
+    &-list {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #ccc;
+    }
+    &-item {
+        border-radius: 6px;
+        transition: all .2s linear;
+    }
+    &-item:hover {
+        background-color: #ccc;
+    }
+    &-item-link {
+        display: flex;
+        align-items: center;
+        font-size: 3rem;
+        padding: 1rem;
+        color: rgba($color: #000000, $alpha: 0.6);
+    }
+    &-item-link:first-child .sidebar-item-text{
+        text-transform: capitalize;
+    }
+    &-item-text {
+        margin-left: 1.6rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+}
+.logout {
+    &-button {
+        border: none;
+        padding: 1.2rem;
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        color: $primary-color;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: all .2s linear;
+        background-color: transparent;
+        &:hover {
+            color: #fff;
+            background-color: $primary-color;
+        }
+
+    }
+    &-icon {
+        font-size: 2.4rem;
+        margin-right: 2rem;
+    }
+    &-text {
+        font-family: $primary-font;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+}

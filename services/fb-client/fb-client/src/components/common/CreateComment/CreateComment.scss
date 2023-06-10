@@ -1,0 +1,35 @@
+@import "../../../index.scss";
+.create-comment {
+    padding: 1.2rem;
+    display: flex;
+    border-top: 1px solid #ccc;
+    &-form {
+        width: calc(100% - 4rem);
+        margin-left: 1rem;
+        position: relative;
+    }
+    &-textarea {
+        width: 100%;
+        border: none;
+        outline: none;
+        resize: none;
+        border-radius: 1rem;
+        background-color: #f0f2f5;
+        padding: 1rem;
+        font-family: $primary-font ;
+        font-size: 1.4rem;
+
+    }
+    &-button {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        border: none;
+        background-color: transparent;
+        font-size: 2rem;
+        cursor: pointer;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}

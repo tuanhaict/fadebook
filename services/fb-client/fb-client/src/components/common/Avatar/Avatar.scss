@@ -1,0 +1,13 @@
+.user {
+    display: flex;
+    align-items: center;
+}
+.avatar {
+    border-radius: 100%;
+    overflow: hidden;
+
+}
+.username {
+    margin-left: 1.5rem;
+    text-transform: capitalize;
+}

@@ -1,0 +1,47 @@
+.friend-sidebar {
+    flex: 1 1 0;
+
+}
+.friend {
+    &-title {
+        margin-top: 1rem;
+        margin-bottom: 1.4rem;
+        font-size: 2rem;
+        font-weight: 500;
+        padding-bottom: 1.4rem;
+        border-bottom: 1px solid #aaa;
+    }
+    &-item {
+        padding: 0.6rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all .2s linear;
+    }
+    &-item:hover {
+        background-color: #ccc;
+    }
+    &-request {
+        &-title {
+            border-top: 1px solid #aaa;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #aaa;
+        }
+        &-list {
+            padding-top: 1rem;
+
+        }
+        &-item {
+            padding: 0.6rem;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all .2s linear;
+        }
+        &-item:hover {
+            background-color: #ccc;
+        }
+    }
+}
